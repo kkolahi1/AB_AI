@@ -4,7 +4,7 @@ This is a problem for data driven product managers, A/B testing data scientists,
 
 “Suppose we want to run an A/B test with a few variants (say 3-4 total) for some ML models and we are triggering and logging the counterfactuals. Even if we had each variant log all the other counterfactuals (which would make Control and variants on an 'even playing field'), it seems like the slow down would hurt the business overall. Any practical advice or pro-tips on how to deal with this situation?”
 
-I spent a lot of time parsing through different sources, not knowing which I could trust, not clearly understanding what they were saying on first pass. This app solves this problem. Ron Kohavi is a trusted source of truth when it comes to A/B testing. At the same time, his book is not available on the internet. I personally asked him if I could use his book, papers, and LinkedIn posts (which I scrapped!) to form the database for this app. Now data driven product managers, A/B testing data scientists, and experimentation managers have a reliable and convenient source of truth for their deep A/B testing questions.
+I spent a lot of time parsing through different sources, not knowing which I could trust, not clearly understanding what they were saying on first pass. This app solves this problem. Ron Kohavi is the preeminent authority in A/B testing. At the same time, his book is not available on the internet. I personally asked him if I could use his book, papers, and relevant LinkedIn posts (which I scrapped!) to form the database for this app. Now data driven product managers, A/B testing data scientists, and experimentation managers have a reliable and convenient source of truth for their deep A/B testing questions.
 
 Users will be able to ask the app any A/B testing question. The app then first uses RAG to try to answer the question using the Kohavi collection. An LLM judge determines if the response is good enough or not. If not, state moves to the agent, which has access to 3 tools: this RAG node again, Arxiv, and this RAG node but with an LLM rephrasing the query. Finally, when the app is ready to answer the question, it first generates 3 follow up questions, then responds to the user with the answer, the sources (including title and page number), and 3 follow up questions. The user can then proceed to ask more questions.
 
@@ -17,3 +17,20 @@ https://docs.google.com/presentation/d/1HKNfEHjNoKetoRHbQ8ijlEXqy1ugi4V6NHvVeiqh
 The actual app (v3) can be found here:
 
 https://huggingface.co/spaces/kamkol/AB_AI_v3 
+
+This is actually v3 of A/B AI, which has been driven by real user feedback from the A/B testing community (along with metrics driven development!)
+
+For development details and the actual app code for v3, please see here:
+
+https://github.com/kkolahi1/AB_AI/tree/master/v3
+
+For development details for v2, please see here:
+
+https://github.com/kkolahi1/AB_AI/tree/master/v2
+
+For development details for v1, please see here:
+
+https://github.com/kkolahi1/AB_AI/tree/master/v1
+
+
+
